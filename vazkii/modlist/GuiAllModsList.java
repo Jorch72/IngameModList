@@ -39,7 +39,7 @@ public class GuiAllModsList extends GuiScreen {
 		else {
 			ArrayList<FetchedMod> mods = new ArrayList();
 			for (FetchedMod mod : ModListFetcher.getAllMods())
-				if (mod.name.toLowerCase().contains(textField.getText().toLowerCase())) mods.add(mod);
+				if ((mod.name + " by " + mod.author).toLowerCase().contains(textField.getText().toLowerCase())) mods.add(mod);
 					modsToLookAt = mods;
 		}
 	}
